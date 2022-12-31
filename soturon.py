@@ -9,6 +9,7 @@ int = "Intensity"
 
 Path = st.sidebar.file_uploader('Excel')
 if Path is not None:
+    st.write(Path)
     Data = pd.ExcelFile(Path)
     Sheet_names = Data.sheet_names
     total = st.sidebar.radio(label="total value", options=(1, 100))
